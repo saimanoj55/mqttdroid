@@ -1,0 +1,34 @@
+<ion-view>
+  <ion-nav-title><img ng-src="img/state-icons/{{scenario.content_state}}.svg" class="icon svg-icon-title"> {{scenario.content_title}}</ion-nav-title>
+  <ion-header-bar class="bar-subheader has-address-bar item-input-inset">
+    <label class="item-input-wrapper">
+    <input type="text" autocorrect="off" autocapitalize="none" placeholder="{{'scan_qr_or_enter_code' | translate}}" ng-model="view.input" my-enter="openView()">
+    </label>
+    <div class="buttons">
+      <button class="button button-clear button-icon ion-android-checkbox" ng-click="openView()">
+      {{'go' | translate}}
+      </button>
+      <button class="button button-clear button-icon ion-qr-scanner" ng-click="scanQr()">
+      {{'qr' | translate}}
+      </button>
+    </div>
+  </ion-header-bar>
+  <ion-content padding="true" overflow-scroll="false">
+    <div ng-show="scenario.history.length == 0">
+      <div class="item card">
+        <div class="item item-text-wrap">
+          <h2>{{'no_beacons_encountered' | translate}}</h2>
+        </div>
+        <div class="item item-text-wrap">
+          <h2>{{'no_beacons_encountered_info' | translate}}</h2>
+        </div>
+      </div>
+    </div>
+    <ion-list>
+      <ion-item nav-clear  
+        ng-repeat="item in scenario.history" 
+        ng-class="{active: $index == scenario.selectedIndex}"
+        ng-click="{{item.ngClick}}"><i class="svg-icon icon-{{item.state}}"></i> <i class="icon {{item.icon}}"></i> {{item.title}}</ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

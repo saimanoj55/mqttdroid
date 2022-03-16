@@ -1,0 +1,43 @@
+<ion-view>
+  <ion-nav-title></ion-nav-title>
+  <ion-content padding="false">
+    <div class="column-container">
+      <div class="row row-no-padding">
+        <a href="javascript:void(0);" class="col block" style="background-image:url(img/blocks/bg/peppers.png);">
+          <div class="block-center">
+            <img src="img/logos/app-logo-home.svg" style="height:80px">
+          </div>
+        </a>
+      </div>
+      <div class="row row-no-padding">
+        <a href="javascript:void(0);" ng-click="scanQr()" class="col block" style="background-image:url(img/blocks/bg/city-bokeh.png);">
+          <div class="block-center">
+            <img src="img/blocks/icons/scan-qr-code.svg" class="icon">
+            <h3>{{'scan_qr' | translate}}</h3>
+          </div>
+        </a>
+        <a href="javascript:void(0);" ng-click="enterCode()" class="col block" style="background-image:url(img/blocks/bg/blackboard.png);">
+          <div class="block-center">
+            <img src="img/blocks/icons/text-balloon.svg" class="icon">
+            <h3>{{'enter_code' | translate}}</h3>
+          </div>
+        </a>
+      </div>
+      <div class="row row-no-padding">
+        <a href="#/nav/apps" class="col block" style="background-image:url(img/blocks/bg/circuitboard.png);">
+          <div class="block-center">
+            <img src="img/blocks/icons/star.svg" class="icon">
+            <h3>{{'apps' | translate}}</h3>
+          </div>
+        </a>
+        <a href="#/nav/beacons" class="col block" style="background-image:url(img/blocks/bg/grid.png);">
+          <div class="block-center">
+            <img src="img/blocks/icons/beacons.svg" class="icon">
+            <h3>{{'beacons' | translate}}</h3>
+          </div>
+        </a>
+      </div>
+    </div>
+    </div>
+  </ion-content>
+</ion-view>

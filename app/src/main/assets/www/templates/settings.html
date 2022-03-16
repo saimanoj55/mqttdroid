@@ -1,0 +1,23 @@
+<ion-view view-title="{{'settings' | translate}}">
+  <ion-content overflow-scroll="false">
+
+    <div class="list card">
+    <div class="item item-body">
+      <div class="list">
+      <label class="item item-input item-select item-stacked-label">
+        <span class="input-label" style="padding-top:0">{{'language' | translate}}</span>
+
+        <select ng-model="language" ng-change="changeLanguage(language)">
+         <option value="en">English</option>
+         <option value="es">Español</option>
+        <option value="nl">Nederlands</option>
+        <option value="ru">Русский</option>
+        </select>
+
+      </label>
+      </div>
+    </div>
+    </div>
+
+  </ion-content>
+</ion-view>

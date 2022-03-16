@@ -1,0 +1,12 @@
+<ion-view view-title="Debug">
+  <ion-content>
+    <button class="button button-dark button-full" ng-click="clearLog()">Clear log</button>
+    <div ng-repeat="item in debug.log track by $index">
+      <div class="item card">
+        <div class="item item-text-wrap">
+          {{ item }}
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,34 @@
+<ion-side-menus enable-menu-with-back-views="true">
+  <ion-side-menu-content ng-controller="NavCtrl">
+    <ion-nav-bar class="bar-light">
+      <ion-nav-back-button class="button-icon icon ion-arrow-left-c">
+      </ion-nav-back-button>
+      <ion-nav-buttons side="left">
+        <button class="button button-icon ion-navicon" menu-toggle="left"></button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="mainView" id="mainView">
+    </ion-nav-view>
+  </ion-side-menu-content>
+  <ion-side-menu side="left">
+    <ion-header-bar>
+      <h1 class="title"><a href="#/nav/home" nav-clear menu-close style="text-decoration:none">{{'app_title' | translate}}</a></h1>
+    </ion-header-bar>
+    <ion-content overflow-scroll="false">
+      <ion-list style="margin-top:10px">
+        <ion-item nav-clear menu-close href="#/nav/home" class="item-icon-left" ng-class="{active: location.path() == '/nav/home' }"><i class="icon ion-android-home"></i> {{'home' | translate}}</ion-item>
+        <ion-item nav-clear menu-close href="#/nav/apps" class="item-icon-left" ng-class="{active: location.path() == '/nav/apps' }"><i class="icon ion-android-star"></i> {{'apps' | translate}}</ion-item>
+        <ion-item nav-clear menu-close ng-click="scanQr()" class="item-icon-left"><i class="icon ion-qr-scanner"></i> {{'qr_scanner' | translate}}</ion-item>
+        <ion-item nav-clear menu-close ng-click="enterCode()" class="item-icon-left"><i class="icon ion-android-textsms"></i> {{'enter_code' | translate}}</ion-item>
+        <ion-item nav-clear menu-close href="#/nav/beacons" class="item-icon-left" ng-class="{active: location.path() == '/nav/beacons' }"><i class="icon ion-radio-waves"></i> {{'beacons' | translate}}</ion-item>
+        <ion-item nav-clear menu-close href="#/nav/eddystone" class="item-icon-left" ng-class="{active: location.path() == '/nav/eddystone' }"><i class="icon ion-compass"></i> {{'nearby_eddystones' | translate}}</ion-item>
+        <ion-item nav-clear menu-close href="#/nav/debug" class="item-icon-left" ng-show="debug.nav" ng-class="{active: location.path() == '/nav/debug' }"><i class="icon ion-bug"></i> Debug</ion-item>
+      </ion-list>
+
+      <ion-list style="left:0;right:0;margin:0; bottom:0px;width: 100%;position: fixed;">
+        <ion-item nav-clear menu-close href="#/nav/help" class="item-icon-left" ng-class="{active: location.path() == '/nav/help' }"><i class="icon ion-ios-help-outline"></i> {{'help' | translate}}</ion-item>
+        <ion-item nav-clear menu-close href="#/nav/settings" class="item-icon-left" ng-class="{active: location.path() == '/nav/settings' }"><i class="icon ion-ios-gear"></i> {{'settings' | translate}}</ion-item>
+      <ion-list>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>

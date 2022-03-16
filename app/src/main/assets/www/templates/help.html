@@ -1,0 +1,37 @@
+<ion-view view-title="{{'help' | translate}}">
+  <ion-header-bar class="bar-subheader has-address-bar item-input-inset">
+    <label class="item-input-wrapper">
+    <input type="text" autocorrect="off" autocapitalize="none" placeholder="{{'scan_qr_or_enter_code' | translate}}" ng-model="view.input" my-enter="openView()">
+    </label>
+    <div class="buttons">
+      <button class="button button-clear button-icon ion-android-checkbox" ng-click="openView()">
+      {{'go' | translate}}
+      </button>
+      <button class="button button-clear button-icon ion-qr-scanner" ng-click="scanQr()">
+      {{'qr' | translate}}
+      </button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+    <div class="item card">
+      <div class="item item-text-wrap">
+        <h2>What can I do with this app?</h2>
+        <p>Scan QR codes or enter codes created with our Proximity Platform. If the QR code is Proximity Enabled, you can get proximity based notifications like deals and contextual information. At some venues you will get a code you can enter in the address bar.</p>
+      </div>
+      <div class="item item-text-wrap">
+        <h2>What are the requirements?</h2>
+        <p>Bluetooth must be enabled to sense iBeacons and Eddystone beacons. Location services must be enabled to receive location based notifications.</p>
+      </div>
+      <div class="item item-text-wrap">
+        <h2>Privacy statement</h2>
+        <p>Though the app asks for permission to continuesly use your location, this data is not sent to any server nor saved in the app. There is anonymous data collected when and where scenarios are triggered and QR codes are scanned. Data like your phone number, name and other personal information are not accessed by this app.</p>
+      </div>
+      <div class="item item-image">
+        <img src="img/logos/ibeacon.svg" style="margin:30px 0; width:200px">
+      </div>
+      <div class="item item-image">
+        <img src="img/logos/eddystone.svg" style="margin:30px 0; width:200px">
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
